@@ -20,7 +20,7 @@ const File = new mongoose.Schema({
 
 //Criar um campo virtual
 File.virtual('url').get(function(){
-    const url = process.env.URL || 'http://localhost:3333'
+    const url = process.env.URL || 'http://localhost:3333';
     //Coloca o texto de dentro em URL
     return  `${url}/files/${encodeURIComponent(this.path)}`; 
 });
