@@ -1,3 +1,5 @@
 node_modules
 temp/*
 !temp/.gitkeep 
+nbproject
+yarn-error.log
