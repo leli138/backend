@@ -20,7 +20,7 @@ io.on('connection', socket => {
 
 app.use((req,res,next)=>{
     req.io = io; //Toda rota que vier apartir de app.use vai ter acesso a io dentro do req
-    return next; //Processa esse código e passa para as rotas terminar de processar.
+    return next(); //Processa esse código e passa para as rotas terminar de processar.
 });
 
 mongoose.connect('mongodb+srv://weslen:short649@cluster0-umrad.mongodb.net/omnistack?retryWrites=true', {
