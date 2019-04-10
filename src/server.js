@@ -23,7 +23,7 @@ app.use((req,res,next)=>{
     return next; //Processa esse código e passa para as rotas terminar de processar.
 });
 
-mongoose.connect('mongodb+srv://weslen:short649@cluster0-umrad.mongodb.net/omnistack?retryWrites=true', {
+mongoose.connect('mongodb+srv://weslen:short649@@cluster0-umrad.mongodb.net/omnistack?retryWrites=true', {
 useNewUrlParser: true
 
 });
@@ -43,4 +43,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'temp')));
 app.use(require('./routes'));
 
 //Rodar o servidor em um a porta
-server.listen(3333);
+server.listen(process.event.PORT || 3333);
